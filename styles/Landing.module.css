@@ -1,0 +1,13 @@
+.background {
+    height: 100vh;
+    background-image: url('../images/landing2.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #000000;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}
