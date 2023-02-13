@@ -3,6 +3,9 @@ import Image from 'next/image'
 import Footer from './comps/footer'
 import Landing from './comps/landing'
 import styles from '../styles/Home.module.css'
+import Container from '@mui/material/Container';
+import ProductsList from './comps/productlist';
+import PRODUCTS from '../data.js';
 
 export default function Home() {
   return (
@@ -16,6 +19,9 @@ export default function Home() {
       <main className={styles.main}>
         <div>
           <Landing />
+          <Container maxWidth="lg">
+            <ProductsList products={PRODUCTS} />
+          </Container>
           <Footer />
         </div>
       </main>
