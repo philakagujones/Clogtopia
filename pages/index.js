@@ -1,11 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import ScrollingBar from './comps/scrollingbar'
 import Navbar from './comps/navbar'
-
-const inter = Inter({ subsets: ['latin'] })
+import Instagram from './comps/instagram'
+import Footer from './comps/footer'
 
 export default function Home() {
   return (
@@ -22,8 +21,32 @@ export default function Home() {
         </ScrollingBar>
       </div>
       <Navbar />
-      <main className={styles.main}>
-      </main>
+      {/* <main className={styles.main}> */}
+        <div className={styles.scroller}>
+          <section className={styles.child}>
+            <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko.</p>
+          </section>
+          <section className={styles.child}>
+            <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko.</p>
+          </section>
+          <section className={styles.child}>
+            <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko.</p>
+          </section>
+          <section className={styles.child}>
+            <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko.</p>
+          </section>
+        </div>
+      {/* </main> */}
+      <div>
+        <ScrollingBar>
+          <span>#CLOGGY #FEELINGCLOGGY #LETSGETCLOGGY</span>
+        </ScrollingBar>
+      </div>
+      <Instagram />
+      <div>
+        reviews?
+      </div>
+      <Footer />
     </>
   )
 }
