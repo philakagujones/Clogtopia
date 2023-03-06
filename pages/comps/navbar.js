@@ -1,54 +1,120 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import styles from '../../styles/Navbar.module.css'
+import { Navbar, Link, Text, Avatar, Dropdown } from "@nextui-org/react";
 
-const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleMenuClick = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  const renderMenuItems = () => {
-    return (
-      <>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/shop">Shop</Link>
-        </li>
-        <li>
-          <Link href="/about">About</Link>
-        </li>
-        <li>
-          <Link href="/contact">Contact</Link>
-        </li>
-        <li>
-          <Link href="/order">Order</Link>
-        </li>
-        <li>
-          <Link href="/cart">Cart</Link>
-        </li>
-      </>
-    );
-  };
+export default function App() {
+  const collapseItems = [
+    "Profile",
+    "Dashboard",
+    "Activity",
+    "Analytics",
+    "System",
+    "Deployments",
+    "My Settings",
+    "Team Settings",
+    "Help & Feedback",
+    "Log Out",
+  ];
 
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.navbar__brand}>
-        <Link href="/">Your Brand</Link>
-      </div>
-      <div className={styles.navbar__menu}>
-        <ul className={`${menuOpen ? styles.navbar__menu_items.open : styles.navbar__menu_items}`}>
-          {renderMenuItems()}
-        </ul>
-        <button className={styles.navbar__menu_toggle} onClick={handleMenuClick}>
-          {menuOpen ? 'Close' : 'Menu'}
-        </button>
-      </div>
-    </nav>
+      <Navbar isBordered variant="sticky">
+        <Navbar.Toggle showIn="xs" />
+        <Navbar.Brand
+          css={{
+            "@xs": {
+              w: "12%",
+            },
+          }}
+        >
+          {/* logo */}
+          <Text b color="inherit" hideIn="xs">
+            CLOGTOPIA
+          </Text>
+        </Navbar.Brand>
+        <Navbar.Content
+          enableCursorHighlight
+          activeColor="warning"
+          hideIn="xs"
+          variant="highlight"
+        >
+          <Navbar.Link href="#">iPhone Cases</Navbar.Link>
+          <Navbar.Link isActive href="#">
+            Accessories
+          </Navbar.Link>
+          <Navbar.Link href="#">Account</Navbar.Link>
+          <Navbar.Link href="#">Cart</Navbar.Link>
+        </Navbar.Content>
+        <Navbar.Content
+          css={{
+            "@xs": {
+              w: "12%",
+              jc: "flex-end",
+            },
+          }}
+        >
+          <Dropdown placement="bottom-right">
+            <Navbar.Item>
+              <Dropdown.Trigger>
+                <Avatar
+                  bordered
+                  as="button"
+                  color="warning"
+                  size="md"
+                  src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+                />
+              </Dropdown.Trigger>
+            </Navbar.Item>
+            <Dropdown.Menu
+              aria-label="User menu actions"
+              color="warning"
+              onAction={(actionKey) => console.log({ actionKey })}
+            >
+              <Dropdown.Item key="profile" css={{ height: "$18" }}>
+                <Text b color="inherit" css={{ d: "flex" }}>
+                  Signed in as
+                </Text>
+                <Text b color="inherit" css={{ d: "flex" }}>
+                  zoey@example.com
+                </Text>
+              </Dropdown.Item>
+              <Dropdown.Item key="settings" withDivider>
+                My Settings
+              </Dropdown.Item>
+              <Dropdown.Item key="team_settings">Team Settings</Dropdown.Item>
+              <Dropdown.Item key="analytics" withDivider>
+                Analytics
+              </Dropdown.Item>
+              <Dropdown.Item key="system">System</Dropdown.Item>
+              <Dropdown.Item key="configurations">Configurations</Dropdown.Item>
+              <Dropdown.Item key="help_and_feedback" withDivider>
+                Help & Feedback
+              </Dropdown.Item>
+              <Dropdown.Item key="logout" withDivider color="error">
+                Log Out
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Navbar.Content>
+        <Navbar.Collapse disableAnimation>
+          {collapseItems.map((item, index) => (
+            <Navbar.CollapseItem
+              key={item}
+              activeColor="warning"
+              css={{
+                color: index === collapseItems.length - 1 ? "$error" : "",
+              }}
+              isActive={index === 2}
+            >
+              <Link
+                color="inherit"
+                css={{
+                  minWidth: "100%",
+                }}
+                href="#"
+              >
+                {item}
+              </Link>
+            </Navbar.CollapseItem>
+          ))}
+        </Navbar.Collapse>
+      </Navbar>
   );
-};
-
-export default Navbar;
+}
