@@ -10,7 +10,7 @@ export default function Model() {
     setToggleState(index);
   };
   return (
-    <>
+    <> 
     <div className={styles.tabs}>
             <div className={ toggleState === 1 ? `${styles.selectedtab}` : `${styles.tab}` }
             onClick={() => toggleTab(1)}
