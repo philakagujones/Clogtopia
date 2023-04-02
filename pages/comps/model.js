@@ -11,15 +11,7 @@ export default function Model() {
   };
   return (
     <> 
-    <model-viewer src="https://cdn.glitch.global/acfaa7f2-487e-4b9d-a891-abed8d51d319/cloggyblack.glb?v=1680423829401"
-                  ios-src="https://cdn.glitch.global/acfaa7f2-487e-4b9d-a891-abed8d51d319/cloggyblack.glb?v=1680423829401"
-                  poster="https://cdn.glitch.global/acfaa7f2-487e-4b9d-a891-abed8d51d319/blackposter.webp?v=1680426640921"
-                  alt="Our beautiful case"
-                  shadow-intensity="1"
-                  camera-controls
-                  auto-rotate ar>
-                </model-viewer>
-    {/* <div className={styles.tabs}>
+    <div className={styles.tabs}>
             <div className={ toggleState === 1 ? `${styles.selectedtab}` : `${styles.tab}` }
             onClick={() => toggleTab(1)}
             >
@@ -111,7 +103,7 @@ export default function Model() {
                   auto-rotate ar>
             </model-viewer>
             </div>
-        </div> */}
+        </div>
     </>
   )
 }
