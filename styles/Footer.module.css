@@ -1,0 +1,107 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    color: white;
+}
+
+.words {
+    flex: 1;
+    font-size: 12px;
+}
+.words>ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 1rem;
+    cursor: default;
+}
+.words>ul>li:hover {
+    color: rgba(255, 255, 255, 0.389);
+    cursor: pointer;
+}
+
+.icons {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 40px;
+    gap: 1rem;
+}
+
+.instagram {
+    color: rgb(255, 255, 255);
+  }
+  .instagram:hover {
+    animation: instaAnim 0.4s normal forwards linear;
+    -webkit-animation: instaAnim 0.4s normal forwards linear;
+  }
+  @-webkit-keyframes instaAnim {
+    50% {
+    }
+    100% {
+      color: #bc2a8d;
+    }
+  }
+  @keyframes instaAnim {
+    50% {
+    }
+    100% {
+      color: #bc2a8d;
+    }
+}
+
+.twitter {
+    color: rgb(255, 255, 255);
+}
+.twitter:hover {
+    animation: twitterAnim 0.4s normal forwards linear;
+    -webkit-animation: twitterAnim 0.4s normal forwards linear;
+}
+    @keyframes twitterAnim {
+        50% {
+        }
+        100% {
+            color: #1da1f2;
+        }
+}
+    @-webkit-keyframes twitterAnim {
+        50% {
+        }
+        100% {
+            color: #1da1f2;
+        }
+}
+
+.facebook {
+    color: rgb(255, 255, 255);
+}
+.facebook:hover {
+    animation: facebookAnim 0.4s normal forwards linear;
+    -webkit-animation: facebookAnim 0.4s normal forwards linear;
+}
+    @keyframes facebookAnim {
+        50% {
+        }
+        100% {
+            color: #3b5998;
+        }
+}
+    @-webkit-keyframes facebookAnim {
+        50% {
+        }
+        100% {
+            color: #3b5998;
+        }
+}
+
+@media screen and (max-width: 700px) {
+    .words {
+        font-size: 10px;
+    }
+    .icons {
+        padding-right: 20px;
+    }
+}
