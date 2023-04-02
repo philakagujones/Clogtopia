@@ -4,7 +4,6 @@ import styles from '@/styles/Home.module.css'
 import Navski from './comps/navbar'
 import Marquee from './comps/marquee'
 import { Text, Button } from "@nextui-org/react";
-// import Model from './comps/model'
 import dynamic from 'next/dynamic'
 import Footer from './comps/footer'
 
