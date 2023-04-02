@@ -2,7 +2,7 @@
     overflow: hidden;
     display: flex;
     width: 10000000px;
-    font-size: calc(7px + 0.5vw);
+    font-size: calc(7px + 0.3vw);
     height: 2rem;
     margin-top: 5px;
   }
