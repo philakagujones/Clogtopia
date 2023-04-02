@@ -1,10 +1,11 @@
 import React from 'react'
-import { useState } from 'react'
-import '@google/model-viewer';
+import { useState, useEffect } from 'react'
+// import '@google/model-viewer';
 
 import styles from '@/styles/Model.module.css'
 
 export default function Model() {
+  useEffect(() => { import('@google/model-viewer').catch(console.error); }, []); 
   const [toggleState, setToggleState] = useState(1);
   const toggleTab = (index) => {
     setToggleState(index);
