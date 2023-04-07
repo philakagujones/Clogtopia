@@ -107,8 +107,8 @@ a {
 }
 
 model-viewer {
-  width: 900px;
-  height: 700px;
+  width: calc(600px + 2vw);
+  height: calc(466px + 2vh);
 }
 
 @media screen and (max-width: 700px) {

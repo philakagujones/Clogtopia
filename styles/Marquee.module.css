@@ -5,6 +5,7 @@
     font-size: calc(7px + 0.3vw);
     height: 2rem;
     margin-top: 5px;
+    color: black;
   }
   
   .custom-marquee-text {

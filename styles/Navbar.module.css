@@ -2,11 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    background: none;
+    z-index: 1;
+    overflow: hidden;
 }
 
 .logo {
-    width: calc(100px + 6vw);
+    width: calc(60px + 1vw);
     height: auto;
     position: relative;
     cursor: pointer;
