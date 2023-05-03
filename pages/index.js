@@ -7,6 +7,7 @@ import { Text, Button } from "@nextui-org/react";
 import dynamic from 'next/dynamic'
 import Footer from './comps/footer'
 import Background from '@/images/cloggybackground.png'
+import Mail from './comps/mail'
 
 const Model = dynamic(
   () => import('./comps/model'),
@@ -33,15 +34,41 @@ export default function Home() {
               <div className={styles.wordstop}>
                 <Text
                     h1
-                    size={45}
+                    size={30}
                     css={{
                       textGradient: "45deg, $green600 -20%, $blue600 50%",
+                      '@xs': {
+                        color: '$blue100',
+                      },
+                      '@sm': {
+                        color: '$yellow100',
+                      },
+                      '@md': {
+                        fontSize: 'md',
+                      },
+                      '@lg': {
+                        fontSize: 'xl'
+                      },
+                      margin: "1rem"
                     }}
                     weight="bold"
                   >
                     The only iPhone case you will ever need.
                 </Text>
-                <div className={styles.cloggy}>
+                <Text
+                    h1
+                    size={28}
+                    css={{
+                      // textGradient: "45deg, $green600 -20%, $blue600 50%",
+                      color: "Black"
+                    }}
+                    weight="normal"
+                  >
+                    Our innovative cases feature carefully crafted holes that allow you to add your favorite charms, turning your phone into a stylish accessory that's uniquely you. <br/>
+                    Keep your phone safe while expressing your individuality with our charming cases!
+                </Text>
+              </div>  
+                {/* <div className={styles.cloggy}>
                   <Image 
                     src={Background}
                     alt="Cloggy photo"
@@ -50,8 +77,7 @@ export default function Home() {
                     }}
                     height={400}
                   />
-                </div>
-              </div>     
+                </div> */}   
             </div>      
            </section>
            <section className={styles.child}>
@@ -72,7 +98,8 @@ export default function Home() {
               </div>           
            </section>
            <section className={styles.child}>
-           <div className={styles.button}>
+            <Mail/>
+           {/* <div className={styles.button}>
                 <Button shadow color="gradient">
                   Kickstarter Campaign
                 </Button>
@@ -86,7 +113,7 @@ export default function Home() {
               >
                 Stay tuned.
               </Text>
-            </div>           
+            </div>            */}
         </section>
       </div>
       {/* <main className={styles.main}>
