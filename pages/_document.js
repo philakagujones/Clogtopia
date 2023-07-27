@@ -17,6 +17,7 @@ class MyDocument extends Document {
         <Head>{CssBaseline.flush()}</Head>
         <body>
           <Main />
+          <script src="public/chimp.js" />
           <NextScript />
         </body>
       </Html>

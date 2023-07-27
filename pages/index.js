@@ -25,7 +25,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.sticky}>
-          <Marquee text="LIMITED TIME - EARLY BIRD OFFER ON KICKSTARTER COMING SOON &nbsp; &nbsp; &nbsp; &nbsp; LET'S GET CLOGGY &nbsp; &nbsp; &nbsp; &nbsp;"/>
+          <Marquee text="EARLY BIRD PREORDERS AVAILABLE NOW &nbsp; &nbsp; &nbsp; &nbsp; FREE NA SHIPPING ON ORDERS $100+ &nbsp; &nbsp; &nbsp; &nbsp;"/>
           <Navski />
       </div>
       <div className={styles.scroller}>
