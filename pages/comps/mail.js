@@ -35,7 +35,7 @@ export default function Mail() {
                 weight="bold"
               >
                 Follow us!
-              </Text> */}
+              </Text> */} 
     </div>
     <div className={styles.mail}>
     <a href={'https://www.instagram.com/clogtopia'} target={'_blank'} rel={'noopener noreferrer'}>
