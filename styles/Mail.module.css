@@ -9,5 +9,10 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    margin-top: -1rem;
     margin-bottom: 2rem;
+}
+
+.social {
+  color: black;
 }

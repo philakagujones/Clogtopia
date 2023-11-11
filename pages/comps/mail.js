@@ -1,6 +1,10 @@
 import React from 'react'
 import styles from '@/styles/Mail.module.css'
 import { Text, Button, Input, useInput } from "@nextui-org/react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
+
+
 
 export default function Mail() {
   const { value, reset, bindings } = useInput("");
@@ -24,17 +28,38 @@ export default function Mail() {
   return (
     <>
     <div className={styles.words}>
-              <Text
+              {/* <Text
                 h1
-                size={45}
+                size={30}
                 color="black"
                 weight="bold"
               >
-                Join our pre-launch waitlist!
-              </Text>
+                Follow us!
+              </Text> */}
     </div>
     <div className={styles.mail}>
-    <Input
+    <a href={'https://www.instagram.com/clogtopia'} target={'_blank'} rel={'noopener noreferrer'}>
+        <div className={styles.social}>
+          INSTAGRAM
+        </div>
+      </a>
+      <a href={'https://www.tiktok.com/@clogtopia'} target={'_blank'} rel={'noopener noreferrer'}>
+        <div className={styles.social}>
+          TIKTOK
+        </div>
+      </a>
+
+      {/* <a href={'https://www.instagram.com/clogtopia'} target={'_blank'} rel={'noopener noreferrer'}>
+        <div>
+          <FontAwesomeIcon icon={faInstagram} size="1x" className={styles.social} />
+        </div>
+      </a>
+      <a href={'https://www.tiktok.com/@clogtopia'} target={'_blank'} rel={'noopener noreferrer'}>
+        <div>
+          <FontAwesomeIcon icon={faTiktok} size="1x" className={styles.social} />
+        </div>
+      </a> */}
+    {/* <Input
           {...bindings}
           clearable
           shadow={false}
@@ -55,11 +80,11 @@ export default function Mail() {
                 disabled
                 >
                   Submit
-                </Button>
+                </Button> */}
     </div>
-    <div className={styles.button}>
+    {/* <div className={styles.button}>
                 
-              </div>  
+              </div>   */}
     </>  
   )
 }
